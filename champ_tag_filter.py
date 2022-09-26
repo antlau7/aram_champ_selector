@@ -25,12 +25,12 @@ if role:
 else:
     champ_pool = list(champ_df['name'])
 
-print(len(champ_pool))
 print("This is the current champ pool:", champ_pool, "\n")
 
 # Choose champs for team 1 then team 2
-team1 = random.sample(champ_pool, 10)
-team2 = random.sample(list(set(champ_pool) - set(team1)), 10)
+pool_size = 10
+team1 = random.sample(champ_pool, pool_size)
+team2 = random.sample(list(set(champ_pool) - set(team1)), pool_size)
 
 print('Champion pool for Team 1:', team1)
 print('Champion pool for Team 2:', team2)
